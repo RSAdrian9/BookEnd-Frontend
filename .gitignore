@@ -66,3 +66,13 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Ionic generated files
+/node_modules
+/www
+/platforms
+/plugins
+
+# IDE/Editor specific files
+.idea/
+.vscode/
