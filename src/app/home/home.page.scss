@@ -1,0 +1,9 @@
+/* Estilo personalizado para ion-searchbar */
+.custom-searchbar {
+    --border-radius: 20px; /* Define el radio de borde */
+  }
+  
+  /* Estilo personalizado para el botón de limpieza */
+  .custom-searchbar .searchbar-clear-button {
+    --border-radius: 0 20px 20px 0; /* Define el radio de borde para el botón de limpieza */
+  }  
