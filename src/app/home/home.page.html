@@ -1,13 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-searchbar class="custom-searchbar w-full sm:w-1/2 lg:w-" show-clear-button="focus"></ion-searchbar>
+    <div class="flex items-center">
+      <!-- Utiliza *ngIf para mostrar el título solo en dispositivos de escritorio -->
+      <ion-title size="large" *ngIf="isDesktop()">Bookend</ion-title>
+      <!-- Barra de búsqueda siempre visible -->
+      <ion-searchbar class="custom-searchbar w-full sm:w-1/2 lg:w-" show-clear-button="focus"></ion-searchbar>
+    </div>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Home</ion-title>
-    </ion-toolbar>
-  </ion-header>
 </ion-content>

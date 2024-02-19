@@ -5,13 +5,13 @@ import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-register',
+  templateUrl: './register.page.html',
+  styleUrls: ['./register.page.scss'],
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule]
 })
-export class LoginPage implements OnInit {
+export class RegisterPage implements OnInit {
 
   ngOnInit() {
   }
@@ -23,13 +23,7 @@ export class LoginPage implements OnInit {
     this.router.navigateByUrl('/tabs/home');
   }
 
-  login() {
-    // Aquí iría la lógica para iniciar sesión
-    console.log('Iniciando sesión...');
-  }
-
-  // Método para redirigir a la página de registro
-  registerPage() {
-    this.router.navigate(['/register']);
+  loginPage() {
+    this.router.navigate(['/']);
   }
 }
