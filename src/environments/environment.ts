@@ -11,9 +11,13 @@ export const environment = {
     storageBucket: "bookend-63395.appspot.com",
     messagingSenderId: "842943989778",
     appId: "1:842943989778:web:27ff63541bc462cf0d70cb",
-    measurementId: "G-7CZJZJY3T6"
+    measurementId: "G-7CZJZJY3T6",
+
+    apiUrl: 'http://localhost:5432/bookend-api'
   }
 };
+
+
 
 /*
  * For easier debugging in development mode, you can import the following file
