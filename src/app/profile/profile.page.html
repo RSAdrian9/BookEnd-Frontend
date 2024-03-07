@@ -9,11 +9,17 @@
 
 <ion-content>
   <ion-card *ngIf="currentUser">
-    <ion-card-header>
-      <!-- Mostrar datos del usuario aquí -->
-    </ion-card-header>
     <ion-card-content>
       <!-- Mostrar otros datos del usuario aquí -->
+      <ion-item>
+        <ion-label>Username</ion-label>
+        <ion-text>{{ currentUser.userName }}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label>Contraseña</ion-label>
+        <ion-text>{{ currentUser.password }}</ion-text>
+      </ion-item>
+      <!-- Agregar más campos según sea necesario -->
     </ion-card-content>
   </ion-card>
 </ion-content>

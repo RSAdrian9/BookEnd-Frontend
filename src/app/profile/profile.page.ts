@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { user } from '../model/user.model';
 import { Router } from '@angular/router';
-import { IonCard, IonCardContent, IonCardHeader, IonContent, IonButtons, IonButton, IonHeader, IonToolbar, IonTitle, ToastController } from '@ionic/angular/standalone';
+import { IonCard, IonCardContent, IonCardHeader, IonContent, IonButtons, IonButton, IonHeader, IonToolbar, IonTitle, ToastController, IonItem, IonLabel, IonText } from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,16 +10,19 @@ import { CommonModule } from '@angular/common';
   templateUrl: './profile.page.html',
   styleUrls: ['./profile.page.scss'],
   standalone: true,
-  imports: [ IonCard, IonCardContent, IonCardHeader, IonContent, IonButton, IonButtons, IonHeader, IonToolbar, IonTitle, CommonModule ],
+  imports: [  IonCard, IonCardContent, IonCardHeader, IonContent, IonButton, IonButtons, 
+              IonHeader, IonToolbar, IonTitle, CommonModule, IonText, IonLabel, IonItem ],
 })
 
 export class ProfilePage implements OnInit {
-  currentUser: user | null = null;
+  currentUser: user | null | undefined;
 
   constructor(private authService: AuthService, private router: Router, private toastController: ToastController) { }
 
   ngOnInit() {
-
+    this.authService.currentUser.subscribe(user => {
+      this.currentUser = user;
+    });
   }
 
 
